@@ -1,0 +1,83 @@
+Partlist
+
+Exported from PR9015.brd at 1/21/15 8:31 AM
+
+EAGLE Version 7.2.0 Copyright (c) 1988-2014 CadSoft
+
+Assembly variant: 
+
+Part     Value                  Package                Library               Position (mm)         Orientation
+
+AMP      TPA2005D1DGN           POWER-SOP8             PR_Parts_Library      (35 8.5)              R0
+C1       220uF                  NICHICON_SERIESUD      PR_Parts_Library      (45 14)               R90
+C2                              C0402                  resistor              (24.9 52)             R180
+C3       47p                    C0402                  resistor              (24.9 53.2)           R180
+C4       22pF                   C0402                  resistor              (31.5 59.2)           R0
+C5       22p                    C0402                  resistor              (23.4 57.6)           R180
+C7       22n                    C0402                  resistor              (28.4 60.9)           R180
+C8       .1u                    C0402                  resistor              (23.1 60.6)           R270
+C9       1uF                    C0402                  resistor              (33.6 52.3)           R0
+C10      22n                    C0402                  resistor              (25.3 60.9)           R0
+C11      .1u                    C0402                  resistor              (22 60.6)             R270
+C12      .1uf                   C0402                  resistor              (40.5 51.9)           R180
+C13      .033uf                 C0402                  resistor              (39 4.7)              R180
+C14      10uF                   C0603                  resistor              (43.6 51.9)           R0
+C15      10uF                   C0603                  resistor              (31.6 6)              R180
+C16      .033uf                 C0402                  resistor              (39 7.6)              R0
+C17      1uf                    C0402                  resistor              (38.8 12.7)           R180
+C18      10uF                   C0603                  resistor              (39 9.8)              R180
+C19      .1uf                   C0402                  resistor              (38.8 11.5)           R180
+C20      100pf                  C0402                  resistor              (29.9 8.6)            R90
+D1                              SOT23                  SparkFun-DiscreteSemi (16.9 43.5)           R225
+FB1                             R0402                  resistor              (24.9 54.4)           R0
+FB2                             0805                   SparkFun-Passives     (31.4 13.5)           R180
+FB3                             0805                   SparkFun-Passives     (31.4 11.3)           R0
+FET2     AO3435                 AO3435                 PR_Parts_Library      (59.4 20.3)           R270
+FMIC     SI4702                 SI470X                 PR_Parts_Library      (26.9 56.9)           R90
+ISP      ISP                    2X3-NS                 SparkFun-Connectors   (43.8 64.2)           MR0
+J1       M3_SCREW_POST          M3_SCREW_POST          PR_Parts_Library      (9.5 35)              R0
+JP5      BK-92_MPD_AA_BATT_CLIP BK-92_MPD_AA_BATT_CLIP PR_Parts_Library      (35 53.5)             MR180
+JP6      BK-92_MPD_AA_BATT_CLIP BK-92_MPD_AA_BATT_CLIP PR_Parts_Library      (35 16.5)             MR0
+JST_CONN                        JST-PH-2-SMT-RA        adafruit              (24.2 9.4)            R0
+L1       180nH                  0805                   SparkFun-Passives     (22.2 53.5)           R270
+L2       2.2k@100MHz            C0402                  SparkFun-Passives     (31.5 60.8)           R180
+L3       2.2 kOhm @ 100MHz      C0402                  SparkFun-Passives     (38.8 14)             R180
+LED1                            SML0603                led                   (64 50)               R270
+MCU      Tiny45-20-SMT          SO08-EIAJ              SparkFun-DigitalIC    (43.8 55.4)           R90
+R1       RV170SF_TAIWANA_POT_SW RV170SF_TAIWANA_POT_SW PR_Parts_Library      (60.5 35)             R270
+R2       330                    R0402                  resistor              (29.5 53.5)           R180
+R4       330                    R0402                  resistor              (33.5 54.7)           R180
+R5       330                    R0402                  resistor              (31.5 57)             R180
+R6       10k                    R0402                  resistor              (29.5 52.3)           R180
+R7       4.7k                   R0402                  resistor              (31.5 58.1)           R0
+R8       4.7k                   R0402                  resistor              (32.5 55.9)           R0
+R9       4.7k                   R0402                  resistor              (30.4 54.7)           R0
+R10                             R0805                  resistor              (31.6 17.6)           R180
+R11      40.2K                  R0402                  resistor              (36 4.7)              R180
+R12      10K                    R0402                  resistor              (32.6 8.6)            R90
+R13      40.2K                  R0402                  resistor              (39 6.4)              R180
+R14      1K                     R0402                  resistor              (62 50)               R90
+R15      10K                    R0402                  resistor              (47 52)               R0
+SW1      C&K_PTS645             C&K_TACTILE_SWITCH     PR_Parts_Library      (52.8 59.9)           R325
+TP1      TPTP20R                TP20R                  testpad               (10.6 44.6)           MR0
+TP2      TPTP20R                TP20R                  testpad               (60.5 35)             MR0
+TP3      TPTP20R                TP20R                  testpad               (60.5 30)             MR0
+TP4      TPTP20R                TP20R                  testpad               (38 17)               MR0
+TP5      TPTP20R                TP20R                  testpad               (37 61)               MR0
+TP6      TPTP20R                TP20R                  testpad               (26 10)               MR0
+TP7      TPTP20R                TP20R                  testpad               (30 4)                MR0
+TP8      TPTP20R                TP20R                  testpad               (50 61)               MR0
+TP9      TPTP20R                TP20R                  testpad               (53 61)               MR0
+TP10     TPTP20R                TP20R                  testpad               (50 64)               MR0
+TP11     TPTP20R                TP20R                  testpad               (37 67)               MR0
+TP12     TPTP20R                TP20R                  testpad               (37 64)               MR0
+TP13     TPTP20R                TP20R                  testpad               (39 68)               MR0
+TP14     TPTP20R                TP20R                  testpad               (66 24.5)             MR0
+TP15     TPTP20R                TP20R                  testpad               (66 45.5)             MR0
+TP16     TPTP20R                TP20R                  testpad               (53 27)               MR0
+TP17     TPTP20R                TP20R                  testpad               (48 33)               MR0
+U$1                             CE32A_FOR_JST          PR_Parts_Library      (35 35)               R0
+U$3      FIDUCIAL               FIDUCIAL_1MM           adafruit              (17 9)                R0
+U$4      FIDUCIAL               FIDUCIAL_1MM           adafruit              (33 67)               R0
+U$5      FIDUCIAL               FIDUCIAL_1MM           adafruit              (65 35)               R0
+U$6      ABS25XTAL              ABS25XTAL              PR_Parts_Library      (27.2 64.2)           R0
