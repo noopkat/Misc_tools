@@ -8,7 +8,7 @@ read -p "What frequency do you want your radio tuned to? [97.1]: " frequency
 echo "OK, we are tuning to ${frequency}."
 echo ""
  
-read -p "What programmer should we use? [usbtiny]: " programmer
+read -p "What programmer should we use? Tested versions include usbtiny, usbasp, avrisp2 [usbtiny]: " programmer
 [ -z $programmer ] && programmer=usbtiny
 echo "OK, we are tuning to $frequency, using a $programmer programmer."
 echo ""
