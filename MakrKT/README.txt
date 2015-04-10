@@ -41,7 +41,7 @@ Open terminal and run the following
 8. Type ./Maker.sh in the terminal
 9. Follow the steps in the prompts to enter your desired frequency
 
-*On a Windows follow these steps* 
+*On Windows follow these steps* 
 
 
 *On Ubuntu follow these steps* 
