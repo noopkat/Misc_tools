@@ -26,13 +26,10 @@ The maker kit software package includes these items
 
  Installation
  --------------------------------------
- 1. Install avrdude [list steps]
- 2. Install python  [list versions, steps]
- 3. Install python dependencies, (crcmod, intelHex, pip?)
- 4. Open terminal
- 5. Navigate to the MakrKit directory
- 6. Type ./Maker.sh
- 7. Follow the steps in the prompts to enter your desired frequency
+
+ 1. Navigate to the MakrKit directory cd …/MaKrKT/
+ 2. Type ./Maker.sh
+ 3. Follow the steps in the prompts to enter your desired frequency
 
 
  Links
@@ -45,6 +42,20 @@ The maker kit software package includes these items
 
  License
  --------------------------------------
+
+
+
+
+On a MAC follow these steps 
+
+Open terminal and run the following
+1. sudo easy_install pip
+2. sudo pip install intelHex
+3. sudo pip install crcmod 
+ (prompts install dev tools) accept
+4. open a browser and go to http://www.obdev.at/products/crosspack/index.html
+   download and install cross pack 
+5. relaunch terminal 
 
 
 
