@@ -24,12 +24,27 @@ The maker kit software package includes these items
 
  To simplfy things a little bit, running Maker.sh takes user prompts and invokes eeprom.py, passing off the presets, and then creates the eeprom.hex and then calls avrdude to flash the radio.  
 
- Installation
+Installation
  --------------------------------------
+*On a MAC follow these steps* 
 
- 1. Navigate to the MakrKit directory cd …/MaKrKT/
- 2. Type ./Maker.sh
- 3. Follow the steps in the prompts to enter your desired frequency
+Open terminal and run the following
+1. sudo easy_install pip
+2. sudo pip install intelHex
+3. sudo pip install crcmod 
+ (prompts install dev tools) accept
+4. open a browser and go to http://www.obdev.at/products/crosspack/index.html
+   download and install cross pack 
+5. relaunch terminal 
+6. Navigate to the MakrKit directory cd …/MaKrKT/
+7. Attach your avrisp to the radio and connect the other end to your usb drive. 
+8. Type ./Maker.sh in the terminal
+9. Follow the steps in the prompts to enter your desired frequency
+
+*On a Windows follow these steps* 
+
+
+*On Ubuntu follow these steps* 
 
 
  Links
@@ -44,18 +59,6 @@ The maker kit software package includes these items
  --------------------------------------
 
 
-
-
-On a MAC follow these steps 
-
-Open terminal and run the following
-1. sudo easy_install pip
-2. sudo pip install intelHex
-3. sudo pip install crcmod 
- (prompts install dev tools) accept
-4. open a browser and go to http://www.obdev.at/products/crosspack/index.html
-   download and install cross pack 
-5. relaunch terminal 
 
 
 
