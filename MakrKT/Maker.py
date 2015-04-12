@@ -16,19 +16,21 @@ def build_hex():
   avrdude = Popen(['avrdude', avrdude_flags])
 
 master = Tk()
-Label(master, text='Radio Frequency').grid(row=0)
-Label(master, text='Programmer').grid(row=1)
+master.title('Public Radio Programmer')
+Label(master, text='Hi - So you\'re ready to flash that radio of yours? \nAwesome, let\'s do it!', justify=LEFT).grid(row=0, columnspan=2, sticky=W, pady=10, padx=10)
+Label(master, text='Radio Frequency', justify=RIGHT).grid(row=1, pady=10, padx=10)
+Label(master, text='Programmer', justify=RIGHT).grid(row=2, pady=10, padx=10)
 
 e1 = Entry(master)
 e2 = Entry(master)
 
-e1.grid(row=0, column=1)
-e2.grid(row=1, column=1)
+e1.grid(row=1, column=1, pady=10, padx=10)
+e2.grid(row=2, column=1, pady=10, padx=10)
 
 e1.insert(10, '97.1')
 e2.insert(10, 'usbtiny')
 
-Button(master, text='Quit', command=master.quit).grid(row=3, column=0, sticky=W, pady=4)
-Button(master, text='Flash', command=build_hex).grid(row=3, column=1, sticky=W, pady=4)
+Button(master, text='Flash', command=build_hex).grid(row=3, column=1, sticky=E+N, padx=10, pady=10)
+#Button(master, text='Quit', command=master.quit).grid(row=3, column=2, sticky=W, pady=4)
 
 mainloop()
