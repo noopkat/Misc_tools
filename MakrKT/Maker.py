@@ -24,11 +24,11 @@ def build_hex():
 
 # run avrdude with prior built temporary hex file
 def flash_hex(make_tempfile):
-  avrdude_flags = '-q -P usb -c %s -p attiny45 -b 15 -e -U flash:w:%s -U eeprom:w:%s' % (e2.get(), pr_hex, make_tempfile.name)
-  avrdude = Popen(['avrdude', avrdude_flags], stdout=PIPE, stderr=PIPE)
+  avrdude_cmd = 'avrdude -q -P usb -c %s -p attiny45 -b 15 -e -U flash:w:%s -U eeprom:w:%s' % (e2.get(), pr_hex, make_tempfile.name)
+  avrdude = Popen(avrdude_cmd.split(), stdout=PIPE, stderr=PIPE)
   avrdude_err = avrdude.stderr.read()
 
-  #print avrdude_flags
+  #print avrdude_cmd
 
   if (avrdude_err != 0):
     log_string.set('Oh no! There was an error:\n\n' + avrdude_err)
