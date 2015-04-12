@@ -40,24 +40,26 @@ def flash_hex(make_tempfile):
 # set up GUI
 master = Tk()
 master.title('Public Radio Programmer')
+hero = PhotoImage(file='./pic.gif')
 
-Label(master, text='Hi - So you\'re ready to flash that radio of yours? \nAwesome, let\'s do it!', justify=LEFT).grid(row=0, columnspan=2, sticky=W, pady=10, padx=10)
-Label(master, text='Radio Frequency', justify=RIGHT).grid(row=1, pady=10, padx=10)
-Label(master, text='Programmer', justify=RIGHT).grid(row=2, pady=10, padx=10)
+Label(master, image=hero).grid(row=0, column=0, rowspan=3, sticky=N, padx=10, pady=10)
+Label(master, text='Hi - So you\'re ready to flash that radio of yours? Awesome, let\'s do it!', wraplength=300, justify=LEFT, font='bold').grid(row=0, column=1, columnspan=2, sticky=W, pady=10, padx=10)
+Label(master, text='Radio Frequency', justify=RIGHT).grid(row=1, column=1, pady=10, padx=10, sticky=E)
+Label(master, text='Programmer', justify=RIGHT).grid(row=2, column=1, pady=10, padx=10, sticky=E)
 
 log_string = StringVar()
-log_label = Label(master, justify=LEFT, textvariable=log_string).grid(row=4, columnspan=2, pady=10, padx=10)
+log_label = Message(master, justify=LEFT, textvariable=log_string).grid(row=4, column=1, columnspan=2, pady=10, padx=10)
 
 e1 = Entry(master)
 e2 = Entry(master)
 
-e1.grid(row=1, column=1, pady=10, padx=10)
-e2.grid(row=2, column=1, pady=10, padx=10)
+e1.grid(row=1, column=2, pady=10, padx=10)
+e2.grid(row=2, column=2, pady=10, padx=10)
 
 e1.insert(10, '97.1')
 e2.insert(10, 'usbtiny')
 
-Button(master, text='Flash', command=build_hex, relief=RAISED).grid(row=3, column=1, sticky=E+N, padx=10, pady=10)
+Button(master, text='Flash', command=build_hex, relief=RAISED).grid(row=3, column=2, sticky=E+N, padx=10, pady=10)
 #Button(master, text='Quit', command=master.quit).grid(row=3, column=2, sticky=W, pady=4)
 
 # run TK loop
