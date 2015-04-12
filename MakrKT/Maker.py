@@ -42,7 +42,7 @@ master = Tk()
 master.title('Public Radio Programmer')
 hero = PhotoImage(file='./pic.gif')
 
-Label(master, image=hero).grid(row=0, column=0, rowspan=3, sticky=N, padx=10, pady=10)
+Label(master, image=hero).grid(row=0, column=0, rowspan=4, sticky=N, padx=10, pady=10)
 Label(master, text='Hi - So you\'re ready to flash that radio of yours? Awesome, let\'s do it!', wraplength=300, justify=LEFT, font='bold').grid(row=0, column=1, columnspan=2, sticky=W, pady=10, padx=10)
 Label(master, text='Radio Frequency', justify=RIGHT).grid(row=1, column=1, pady=10, padx=10, sticky=E)
 Label(master, text='Programmer', justify=RIGHT).grid(row=2, column=1, pady=10, padx=10, sticky=E)
