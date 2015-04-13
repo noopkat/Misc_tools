@@ -16,7 +16,7 @@ hero_pic_path = os.path.join(current_dir, 'pic.gif')
 
 # method to run eeprom.py and write to a temporary file
 def build_hex():
-  # set tempfile to now delete upon close() because we gotta close it to pass it in to avrdude
+  # set tempfile to not delete upon close() because we gotta close it to pass it in to avrdude
   make_tempfile = tempfile.NamedTemporaryFile(prefix='eeprom.', suffix='.hex', delete=False)
 
   # run eeprom.py using the entered frequency of choice
