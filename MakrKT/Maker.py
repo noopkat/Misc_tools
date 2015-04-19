@@ -23,8 +23,6 @@ def resource_path(relative_path):
   # return 'real' path to file
   return os.path.join(basedir, relative_path)
 
-# get current directory we're in
-current_dir = os.getcwd()
 # get os path of our scripts we wanna use later
 eeprom_script_path = resource_path('eeprom.py')
 pr_hex_path = resource_path('pr.hex')
