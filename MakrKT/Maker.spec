@@ -19,7 +19,7 @@ docfiles = Datafiles('pic.gif', 'pr.hex', 'eeprom.py')
 
 a = Analysis(['Maker.py'],
              pathex=['./'],
-             hiddenimports=[],
+             hiddenimports=['intelhex', 'datetime', 'struct', 'math', 'crcmod', 'getopt'],
              hookspath=None,
              runtime_hooks=None)
 pyz = PYZ(a.pure)
