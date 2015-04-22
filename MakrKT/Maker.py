@@ -26,7 +26,7 @@ def resource_path(relative_path):
 # get os path of our scripts we wanna use later
 eeprom_script_path = resource_path('eeprom.py')
 pr_hex_path = resource_path('pr.hex')
-hero_pic_path = resource_path(os.path.join('.', 'pic.gif'))
+hero_pic_path = resource_path('pic.gif')
 
 # method to run eeprom.py and write to a temporary file
 def build_hex():
