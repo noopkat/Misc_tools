@@ -2,15 +2,15 @@ These are just rough notes to keep track of how things got set up, for later doc
 
 **Linux**
 
-`sudo apt-get install python-tk`
-`sudo add-apt-repository ppa:pmjdebruijn/avrdude-release`
-`sudo apt-get update`
-`sudo apt-get install avrdude`
+`sudo apt-get install python-tk`  
+`sudo add-apt-repository ppa:pmjdebruijn/avrdude-release`  
+`sudo apt-get update`  
+`sudo apt-get install avrdude`  
 run Maker as sudo
 
 **OSX**
 
-install crosspack
+install crosspack  
 double-click bundled Maker script file
 
 **Windows**
