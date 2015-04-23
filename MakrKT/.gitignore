@@ -1,0 +1,6 @@
+.DS_Store
+.vagrant
+Vagrantfile
+build
+dist
+Maker2.spec
