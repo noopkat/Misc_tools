@@ -51,8 +51,12 @@ def flash_hex(make_tempfile):
   avrdude = Popen(avrdude_cmd, stderr=PIPE, shell=True)
   avrdude_err = avrdude.communicate()[1]
   
-  # log_string is the var that is bound to the status label at the bottom of the GUI
-  log_string.set('\nLog:\n\n' + avrdude_err)
+  # output log of what happened (log_string is the var that is bound to the status label at the bottom of the GUI)
+  if (avrdude_err == ''):   
+    log_string.set('\nHooray, your radio was successfully flashed with frequency %s!' % e1.get())
+  else
+    log_string.set('\nLog:\n\n' + avrdude_err)
+
   # cool so we can delete this file now
   os.remove(make_tempfile.name)
 

@@ -15,4 +15,6 @@ double-click bundled Maker script file
 
 **Windows**
 
-TBC
+install winavr  
+download libusb and run wizard, see http://eliaselectronics.com/using-the-avrispmkii-with-avrdude-on-windows/  
+run exe file / installer  
