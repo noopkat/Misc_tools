@@ -18,10 +18,17 @@ def Datafiles(*filenames, **kw):
 docfiles = Datafiles('pic.gif', 'pr.hex', 'eeprom.py')
 
 a = Analysis(['Maker.py'],
-             pathex=['./],
+             pathex=['./'],
              hiddenimports=['intelhex', 'datetime', 'struct', 'math', 'crcmod', 'getopt'],
              hookspath=None,
              runtime_hooks=None)
+
+b = Analysis(['eeprom.py'],
+             pathex=['./'],
+             hiddenimports=['intelhex', 'datetime', 'struct', 'math', 'crcmod', 'getopt'],
+             hookspath=None,
+             runtime_hooks=None)
+
 pyz = PYZ(a.pure)
 exe = EXE(pyz,
           a.scripts,
@@ -35,6 +42,7 @@ coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,
                a.datas,
+               b.binaries,
                docfiles,
                strip=None,
                upx=True,
