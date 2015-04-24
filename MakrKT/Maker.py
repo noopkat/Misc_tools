@@ -45,7 +45,7 @@ def build_hex():
 # run avrdude with prior built temporary hex file
 def flash_hex(make_tempfile):
   # chain together the avr dude command with flags
-  avrdude_cmd = 'avrdude -qq -P usb -c %s -p attiny45 -b 15 -e -U flash:w:%s -U eeprom:w:%s:i' % (e2.get(), pr_hex_path, make_tempfile.name)
+  avrdude_cmd = 'avrdude -qq -P usb -c %s -p attiny45 -b 15 -e -U flash:w:%s:i -U eeprom:w:%s:i' % (e2.get(), pr_hex_path, make_tempfile.name)
   print avrdude_cmd
   # open subprocess to run avrdude
   avrdude = Popen(avrdude_cmd, stderr=PIPE, shell=True)
