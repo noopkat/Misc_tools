@@ -23,12 +23,6 @@ a = Analysis(['Maker.py'],
              hookspath=None,
              runtime_hooks=None)
 
-b = Analysis(['eeprom.py'],
-             pathex=['./'],
-             hiddenimports=['intelhex', 'datetime', 'struct', 'math', 'crcmod', 'getopt'],
-             hookspath=None,
-             runtime_hooks=None)
-
 pyz = PYZ(a.pure)
 exe = EXE(pyz,
           a.scripts,
@@ -36,13 +30,12 @@ exe = EXE(pyz,
           name='Maker',
           debug=False,
           strip=None,
-          upx=True,
+          upx=False,
           console=True )
 coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,
                a.datas,
-               b.binaries,
                docfiles,
                strip=None,
                upx=True,
