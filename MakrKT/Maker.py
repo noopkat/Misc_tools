@@ -5,10 +5,17 @@ import subprocess
 import tempfile
 import os
 import sys
-import intelhex
-import crcmod
 Popen = subprocess.Popen
 PIPE = subprocess.PIPE
+
+# eeprom module deps, just in case pyinstaller doesn't find them
+from intelhex import IntelHex
+from datetime import date
+from struct import pack
+from math import modf
+import crcmod
+from getopt import getopt, GetoptError
+import eeprom_module
 
 def resource_path(relative_path):
   if getattr(sys, 'frozen', False):
@@ -30,19 +37,10 @@ eeprom_script_path = resource_path('eeprom.py')
 pr_hex_path = resource_path('pr.hex')
 hero_pic_path = resource_path('pic.gif')
 
-# method to run eeprom.py and write to a temporary file
+# method to run eeprom module and get the temporary file back
 def build_hex():
-  # set tempfile to not delete upon close() because we gotta close it to pass it in to avrdude
-  make_tempfile = tempfile.NamedTemporaryFile(prefix='eeprom.', suffix='.hex', delete=False)
-  # run eeprom.py using the entered frequency of choice
-  make_eeprom = subprocess.check_output(eeprom_script_path + ' -f %s' % e1.get(), shell=True)
-  # pipe the output of eeprom.py into the tempfile
-  make_tempfile.write(make_eeprom)
-  # for debug
-  log_string.set(make_eeprom)
-  # we're done with the file
-  make_tempfile.close()
-  flash_hex(make_tempfile)
+  make_eeprom = eeprom_module.get_hex(e1.get())
+  flash_hex(make_eeprom)
 
 # run avrdude with prior built temporary hex file
 def flash_hex(make_tempfile):
@@ -55,9 +53,9 @@ def flash_hex(make_tempfile):
   
   # output log of what happened (log_string is the var that is bound to the status label at the bottom of the GUI)
   if (avrdude_err == ''):   
-    log_string.set('\nHooray, your radio was successfully flashed with frequency %s!' % e1.get())
+    log_string.set('\nHooray, your radio was successfully flashed with frequency %s!\n' % e1.get())
   else:
-    log_string.set('\nLog:\n\n' + avrdude_err)
+    log_string.set('\nLog:\n\n' + avrdude_err + '\n')
 
   # cool so we can delete this file now
   os.remove(make_tempfile.name)
