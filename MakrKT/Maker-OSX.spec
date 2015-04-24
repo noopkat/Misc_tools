@@ -1,4 +1,5 @@
 # -*- mode: python -*-
+# example run cmd: `pyinstaller --additional-hooks-dir=hooks/ Maker-OSX.spec`
 import os
 
 def Datafiles(*filenames, **kw):
