@@ -33,7 +33,6 @@ def resource_path(relative_path):
   return os.path.join(basedir, relative_path)
 
 # get os path of our scripts we wanna use later
-eeprom_script_path = resource_path('eeprom.py')
 pr_hex_path = resource_path('pr.hex')
 hero_pic_path = resource_path('pic.gif')
 
