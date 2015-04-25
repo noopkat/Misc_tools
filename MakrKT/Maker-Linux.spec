@@ -1,5 +1,5 @@
 # -*- mode: python -*-
-# example run cmd: `pyinstaller --additional-hooks-dir=hooks/ Maker-Linux.spec`
+# example run cmd: `pyinstaller --additional-hooks-dir=hooks/s  Maker-Linux.spec`
 import os
 
 def Datafiles(*filenames, **kw):
@@ -27,17 +27,13 @@ a = Analysis(['Maker.py'],
 pyz = PYZ(a.pure)
 exe = EXE(pyz,
           a.scripts,
-          exclude_binaries=True,
+          a.binaries,
+          a.zipfiles,
+          a.datas,
+          docfiles,
+          exclude_binaries=False,
           name='Maker',
           debug=False,
           strip=None,
           upx=False,
           console=True )
-coll = COLLECT(exe,
-               a.binaries,
-               a.zipfiles,
-               a.datas,
-               docfiles,
-               strip=None,
-               upx=True,
-               name='Maker')
