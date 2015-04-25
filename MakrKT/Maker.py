@@ -52,9 +52,9 @@ def flash_hex(make_tempfile):
   
   # output log of what happened (log_string is the var that is bound to the status label at the bottom of the GUI)
   if (avrdude_err == ''):   
-    log_string.set('\nHooray, your radio was successfully flashed with frequency %s!\n' % e1.get())
+    log_string.set('\nAll done! Your radio was successfully flashed with frequency %s.\n' % e1.get())
   else:
-    log_string.set('\nLog:\n\n' + avrdude_err + '\n')
+    log_string.set('\nLog:\n%s\n' % avrdude_err)
 
   # cool so we can delete this file now
   os.remove(make_tempfile.name)
