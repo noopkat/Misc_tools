@@ -45,11 +45,11 @@ When you start up our application, you should see a window that resembles this:
 
 ![screenshot of public radio user interface](https://dl.dropboxusercontent.com/u/16732310/public-radio.png)
 
-You may be able to already tell that there are two text boxes that need some info from you
+You may be able to already tell that there are two text boxes that need some info from you.
 
-The first is labeled 'Radio Frequency. Pretty self explanatory. This is where you'll need to enter which radio station you'd like to tune your radio to. Remember, **this needs to be a number between 87 and 108**. For example, if you're in NYC, WNYC station is 93.9
+The first is labeled 'Radio Frequency'. Pretty self explanatory. This is where you'll need to enter which radio station you'd like to tune your radio to. Remember, **this needs to be a number between 87 and 108**. For example, if you're in NYC, WNYC station is 93.9
 
-The second text box is asking you which programmer you're using to flash the radio's firmware. This is the fancy little box device that you have plugged into your computer's usb port at one end, and the radio at the other end. To know the 'codename' for your programmer to type in, [check this helpful and extensive list here](http://www.nongnu.org/avrdude/user-manual/avrdude_12.html)! As a common example, the AVR ISP MkII should be entered as simply `avrispmkii` in the text box.
+The second text box, 'Programmer', is asking you which programmer you're using to flash the radio's firmware. This is the fancy little box device that you have plugged into your computer's usb port at one end, and the radio at the other end. To know the 'codename' for your programmer to type in, [check this helpful and extensive list here](http://www.nongnu.org/avrdude/user-manual/avrdude_12.html)! As a common example, the AVR ISP MkII should be entered as simply `avrispmkii` in the text box.
 
 The steps to programming your radio are:
 
