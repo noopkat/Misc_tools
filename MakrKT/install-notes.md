@@ -39,9 +39,29 @@ If you're running a flavour of Linux, you're probably already familar with using
 4. You'll need to run our app with admin privileges. The most straightforward way of doing this is to use Terminal to [cd](http://www.linfo.org/cd.html) to the directory where the app is, and run `sudo Maker`
 5. You're installed! Skip to the [next section](#using-the-public-radio-software) to learn which values to type in for successful flashing of your radio.
 
-## Using the Public Radio Software
+## Using the Public Radio software
+
+When you start up our application, you should see a window that resembles this:
+
+![screenshot of public radio user interface](https://lh6.googleusercontent.com/quY_yXbx1KKNnlMOQnw8jU_QSvA9a6xbUmHFBSjWwBoBdFtndfQWuV39dVgpuBS1jZrQz2Obc6UKWvY=w1252-h1208)
+
+You may be able to already tell that there are two text boxes that need some info from you
+
+The first is labeled 'Radio Frequency. Pretty self explanatory. This is where you'll need to enter which radio station you'd like to tune your radio to. Remember, **this needs to be a number between 87 and 108**. For example, if you're in NYC, WNYC station is 93.9
+
+The second text box is asking you which programmer you're using to flash the radio's firmware. This is the fancy little box device that you have plugged into your computer's usb port at one end, and the radio at the other end. To know the 'codename' for your programmer to type in, [check this helpful and extensive list here](http://www.nongnu.org/avrdude/user-manual/avrdude_12.html)! As a common example, the AVR ISP MkII should be entered as simply `avrispmkii` in the text box.
+
+The steps to programming your radio are:
+
+1. Make sure the radio and programmer are hooked up correctly and plugged in via USB. You can double check [this section](#how-to-hook-up-your-public-radio-and-the-programmer) if you're unsure on how to do this.
+2. Enter the radio frequency and programmer codename of choice into the two text boxes.
+3. Take a deep breath, and click 'Flash my Radio'.
+4. Pause for a few seconds to let the hardware do its thing. If all went well, you should see a success message pop up at the bottom of the Public Radio software. If not, not to worry! Check the [troubleshooting section](#troubleshooting) below.
+
+## How to hook up your Public Radio and the programmer 
 
 todo
+
 
 ## Troubleshooting
 
