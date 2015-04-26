@@ -66,4 +66,15 @@ todo
 
 ## Troubleshooting
 
-todo
+**I'm seeing the error `avrdude: error: could not find USB device [...]`**
+1. Check that your programmer is plugged in correctly at both ends, and that the ISP header is not plugged into the Radio board backwards. Most programmers will have a red light if it's backwards, and a green light if it's correct.
+2. Ensure that you typed in the correct programmer codename in the second text box within the Public Radio app.
+3. Make sure your radio is turned on.
+
+**I'm seeing the error `avrdude: error: ser_open(): can't open device "USB": File not found`**
+1. Is your radio turned on? If not, switch it on and try again.
+2. You may see this on Windows if the driver for your programmer is not correctly installed/being found. Try reinstalling the driver, or try again after locating an alternate driver source.
+
+**I'm seeing a long, long error about `Operation not permitted`, halp!**
+1. My hunch is that you're running this on Linux, and the software does not have the right privileges to communicate over USB with the programmer. Try running the app prefixed with the `sudo` command.
+2. As always, make sure your radio is turned on.
