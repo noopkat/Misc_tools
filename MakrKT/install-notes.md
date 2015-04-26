@@ -43,7 +43,7 @@ If you're running a flavour of Linux, you're probably already familar with using
 
 When you start up our application, you should see a window that resembles this:
 
-![screenshot of public radio user interface](https://lh6.googleusercontent.com/quY_yXbx1KKNnlMOQnw8jU_QSvA9a6xbUmHFBSjWwBoBdFtndfQWuV39dVgpuBS1jZrQz2Obc6UKWvY=w1252-h1208)
+![screenshot of public radio user interface](https://dl.dropboxusercontent.com/u/16732310/public-radio.png)
 
 You may be able to already tell that there are two text boxes that need some info from you
 
