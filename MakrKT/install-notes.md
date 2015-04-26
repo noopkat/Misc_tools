@@ -54,9 +54,10 @@ The second text box is asking you which programmer you're using to flash the rad
 The steps to programming your radio are:
 
 1. Make sure the radio and programmer are hooked up correctly and plugged in via USB. You can double check [this section](#how-to-hook-up-your-public-radio-and-the-programmer) if you're unsure on how to do this.
-2. Enter the radio frequency and programmer codename of choice into the two text boxes.
-3. Take a deep breath, and click 'Flash my Radio'.
-4. Pause for a few seconds to let the hardware do its thing. If all went well, you should see a success message pop up at the bottom of the Public Radio software. If not, not to worry! Check the [troubleshooting section](#troubleshooting) below.
+2. Turn on the radio.
+3. Enter the radio frequency and programmer codename of choice into the two text boxes.
+4. Take a deep breath, and click 'Flash my Radio'.
+5. Pause for a few seconds to let the hardware do its thing. If all went well, you should see a success message pop up at the bottom of the Public Radio software. Your radio will also start playing your station! If not, not to worry, check the [troubleshooting section](#troubleshooting) below.
 
 ## How to hook up your Public Radio and the programmer 
 
