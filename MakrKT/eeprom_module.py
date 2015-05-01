@@ -32,7 +32,7 @@
 #  - Without the firmware:
 #       avrdude -qq -P usb -c avrisp2 -p attiny45 -B 15 -U eeprom:w:XYZ-1236.hex
 #    Note the absence of the "-e", or erase option in the second form.
-#  
+#
 
 from intelhex import IntelHex
 from datetime import date
@@ -45,7 +45,7 @@ import os
 import sys
 
 # wrap this in a whole large module to run all at once by Maker.py
-def get_hex(f):
+def get_hex(f, b, d, cs):
 
 	#
 	# All the following to be able to be set with getopt.
@@ -78,13 +78,16 @@ def get_hex(f):
 		yy = int(date.today().strftime('%g'))
 		return pack('17sBB2s13s17s', sn[:16], ww, yy, ts[:2], campaign[:12], eyecatcher)
 
-	
+
 	#
 	# calculate channel # based on freq, band & channel spacing.
 	# Note that we force the floating point arithmetic to round
 	# to a reasonable number of digits in order to avoid daft problems.
 
 	freq = float(f)
+	band = int(b)
+	demphasis =	int(d)
+	spacing= int(cs)
 
 	base = {0: 87.5, 1: 76, 2: 76}
 	step = {0: 5, 1: 10, 2: 20}
@@ -92,12 +95,11 @@ def get_hex(f):
 	try:
 		chan = round((freq - base[band]) * step[spacing], 4)
 	except:
-		print "Illegal band and/or spacing"
-		sys.exit(1)
+		chan = round((freq - base[0]) * step[0], 4)
 
 	if modf(chan)[0] != 0.0:
-		print "Illegal freq/spacing combo"
-		sys.exit(2)
+		chan = 0
+
 
 	chan = int(chan)
 
