@@ -34,7 +34,7 @@ def resource_path(relative_path):
 
 # get os path of our scripts we wanna use later
 pr_hex_path = resource_path('pr.hex')
-hero_pic_path = resource_path('pic.gif')
+hero_pic_path = resource_path('pic_lrg.gif')
 
 # method to run eeprom module and get the temporary file back
 def build_hex():
@@ -45,7 +45,7 @@ def build_hex():
 def flash_hex(make_tempfile):
   # chain together the avr dude command with flags
   avrdude_cmd = 'avrdude -qq -P usb -c %s -p attiny45 -b 15 -e -U flash:w:%s:i -U eeprom:w:%s:i' % (e2.get(), pr_hex_path, make_tempfile.name)
-  print avrdude_cmd
+  # print avrdude_cmd
   # open subprocess to run avrdude
   avrdude = Popen(avrdude_cmd, stderr=PIPE, shell=True)
   avrdude_err = avrdude.communicate()[1]
@@ -74,21 +74,21 @@ smallest_font = ('sans', 11)
 # Just think html tables and you're on the right track of how tkinter interfaces work
 
 # hero image to make it friendlier
-Label(master, image=hero).grid(row=0, column=0, rowspan=7, sticky=N, padx=10, pady=10)
+Label(master, image=hero).grid(row=0, column=0, rowspan=11, sticky=N, padx=10, pady=10)
 
 # hello message
-Label(master, font=bold_font, text='Hi from Public Radio!', wraplength=300, justify=LEFT).grid(row=0, column=1, columnspan=2, sticky=W, pady=0, padx=10)
+Label(master, font=bold_font, text='Hi from Public Radio!', wraplength=300, justify=LEFT).grid(row=0, column=1, columnspan=2, sticky=W, pady=10, padx=10)
 Label(master, font=normal_font, text='So you\'re ready to flash that radio of yours? Awesome, let\'s do it!', wraplength=300, justify=LEFT).grid(row=1, column=1, columnspan=2, sticky=W+N, pady=0, padx=10)
 
 # inout labels
 Label(master, font=normal_font, text='Radio Frequency', justify=RIGHT).grid(row=2, column=1, pady=0, padx=10, sticky=S+E)
 Label(master, font=normal_font, text='Programmer', justify=RIGHT).grid(row=3, column=1, pady=0, padx=10, sticky=S+E)
 Label(master, font=normal_font, text="Band", justify=RIGHT).grid(row=4, column=1, pady=0, padx=10, sticky=S+E)
-Label(master, font=smallest_font, foreground='#888888', text='US, EU = 0, JP = 1 or 2', justify=RIGHT).grid(row=5, column=1, pady=0, padx=10, sticky=N+E)
+Label(master, font=smallest_font, foreground='#888888', text='US & EU = 0; JP = 1 or 2', justify=RIGHT).grid(row=5, column=1, pady=0, padx=10, sticky=N+E)
 Label(master, font=normal_font, text="De-emphasis", justify=RIGHT).grid(row=6, column=1, pady=0, padx=10, sticky=S+E)
-Label(master, font=smallest_font, foreground='#888888', text='US = 0, EU, AU, JP = 1', justify=RIGHT).grid(row=7, column=1, pady=0, padx=10, sticky=N+E)
+Label(master, font=smallest_font, foreground='#888888', text='US = 0; EU, AU & JP = 1', justify=RIGHT).grid(row=7, column=1, pady=0, padx=10, sticky=N+E)
 Label(master, font=normal_font, text="Channel Spacing", justify=RIGHT).grid(row=8, column=1, pady=0, padx=10, sticky=S+E)
-Label(master, font=smallest_font, foreground='#888888', text='US, AU = 0, EU, JP = 1', justify=RIGHT).grid(row=9, column=1, pady=0, padx=10, sticky=N+E)
+Label(master, font=smallest_font, foreground='#888888', text='US & AU = 0; EU & JP = 1', justify=RIGHT).grid(row=9, column=1, pady=0, padx=10, sticky=N+E)
 
 # five input fields
 e1 = Entry(master)

@@ -16,7 +16,7 @@ def Datafiles(*filenames, **kw):
     for filename in filenames
     if os.path.isfile(filename))
 
-docfiles = Datafiles('pic.gif', 'pr.hex')
+docfiles = Datafiles('pic_lrg.gif', 'pr.hex')
 
 a = Analysis(['Maker.py'],
              pathex=['./'],
